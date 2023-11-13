@@ -4,13 +4,17 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import static webdriver.WebdriverInit.driver;
 
 public class BasePageObject {
 
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     public WebDriver getDriver() {
         return driver;
     }
@@ -51,5 +55,15 @@ public class BasePageObject {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView();", locator);
     }
+
+    public void waitUntilVisible(By locator) {
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public void waitUntilClickable(By locator) {
+        wait.until(ExpectedConditions.elementToBeClickable(By.id(String.valueOf(locator))));
+    }
+
+
 
 }

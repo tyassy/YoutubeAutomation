@@ -9,7 +9,8 @@ public interface HomePageLocators {
     By BUTTON_RIGHT_ARROW = By.cssSelector("button[aria-label=\"Next\"]");
 
     //Sidebar Menu
-    String BUTTON_SIDEBAR_MENU = "//a[@title=\"%s\"]//yt-icon[@id=\"icon\"]";
+    String BUTTON_SIDEBAR_MENU = "(//a[@title=\"%s\"])[2]";
+    By BUTTON_SIDEBAR_HOME = By.xpath("(//a[@title=\"Home\"])[2]");
     By HISTORY_PAGE = By.cssSelector("//yt-formatted-string[contains(text(),'Keep track of what you watch')]");
 
     //Youtube Content
@@ -24,7 +25,7 @@ public interface HomePageLocators {
     By BUTTON_MICROPHONE = By.cssSelector("button[aria-label=\"Search with your voice\"]");
 
     //Youtube Channel
-    By BUTTON_SUBSCRIBE = By.xpath("button[aria-label=\"Subscribe\"]");
+    By BUTTON_SUBSCRIBE = By.xpath("//span[contains(text(),'Subscribe')]");
     String BUTTON_CHANNEL_AVATAR = "(//a[@id=\"avatar-link\"])[%d]";
 
 }

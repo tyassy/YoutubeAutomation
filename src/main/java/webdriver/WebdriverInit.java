@@ -23,8 +23,8 @@ public class WebdriverInit {
 
     }
 
-//    public static void quit(){
-//        driver.quit();
-//    }
+    public static void quit(){
+        driver.quit();
+    }
 
 }

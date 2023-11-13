@@ -32,11 +32,33 @@ public class HomePage extends BasePageObject{
     }
 
     public Boolean isFilterContentVisible(String filter) {
-        return find(By.xpath(String.format(FILTER_BUTTON, filter))).isDisplayed();
+        try {
+            clickArrowRightBtn();
+            return find(By.xpath(String.format(FILTER_BUTTON, filter))).isDisplayed();
+        } catch (Exception e){
+            return false;
+        }
+    }
+
+    public Boolean isArrowRightClickable() {
+        try {
+            return find(BUTTON_RIGHT_ARROW).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+    public void clickArrowRightBtn() {
+        while (isArrowRightClickable()){
+            find(BUTTON_RIGHT_ARROW).click();
+        }
     }
 
     public void clickSidebarMenu(String sidebarMenu) {
-        find(By.xpath(String.format(BUTTON_SIDEBAR_MENU, sidebarMenu))).click();
+        try {
+            waitUntilVisible(BUTTON_SIDEBAR_HOME);
+            find(By.xpath(String.format(BUTTON_SIDEBAR_MENU, sidebarMenu))).click();
+        }catch (Exception e){
+        }
     }
 
     public Boolean isHistoryPageDisplayed() {
@@ -68,8 +90,12 @@ public class HomePage extends BasePageObject{
     }
 
     public Boolean isYoutubeChannelOpened() {
-        waitShortly();
-        return find(BUTTON_SUBSCRIBE).isDisplayed();
+        try {
+            waitUntilVisible(BUTTON_SUBSCRIBE);
+            return find(BUTTON_SUBSCRIBE).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 }

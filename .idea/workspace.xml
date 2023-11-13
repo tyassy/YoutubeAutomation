@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bda5955f-2344-426a-9c04-0ff8337187a1" name="Changes" comment="Create web automation for Youtube Homepage">
-      <change afterPath="$PROJECT_DIR$/src/main/java/locators/HomePageLocators.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/webdriver/WebdriverInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/hooks/WebDriverHooks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/HomePageStepDefs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/YoutubeHome.feature" afterDir="false" />
+    <list default="true" id="bda5955f-2344-426a-9c04-0ff8337187a1" name="Changes" comment="Create scenarios and other methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/base/BasePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/BasePageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locators/HomePageLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/locators/HomePageLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/webdriver/WebdriverInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/webdriver/WebdriverInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hooks/WebDriverHooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hooks/WebDriverHooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/YoutubeHome.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/YoutubeHome.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Verify User can see Recently Uploaded filter on Youtube Homepage">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Verify User can open watch history from Youtube Homepage">
     <configuration name="Scenario: Verify User can add content to queue from Youtube Homepage" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/YoutubeHome.feature" />
@@ -158,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Verify User can see Recently Uploaded filter on Youtube Homepage" />
-        <item itemvalue="Cucumber Java.Scenario: Verify User can add content to queue from Youtube Homepage" />
-        <item itemvalue="Cucumber Java.Scenario: Verify User can open Youtube Channel from Youtube Homepage" />
-        <item itemvalue="Cucumber Java.Scenario: Verify User can click share on content from Youtube Homepage" />
         <item itemvalue="Cucumber Java.Scenario: Verify User can open watch history from Youtube Homepage" />
+        <item itemvalue="Cucumber Java.Scenario: Verify User can see Recently Uploaded filter on Youtube Homepage" />
+        <item itemvalue="Cucumber Java.Scenario: Verify User can open Youtube Channel from Youtube Homepage" />
+        <item itemvalue="Cucumber Java.Scenario: Verify User can add content to queue from Youtube Homepage" />
+        <item itemvalue="Cucumber Java.Scenario: Verify User can click share on content from Youtube Homepage" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699858811752</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create scenarios and other methods">
+      <created>1699889682120</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1699889682121</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +203,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create web automation for Youtube Homepage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create web automation for Youtube Homepage" />
+    <MESSAGE value="Create scenarios and other methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create scenarios and other methods" />
   </component>
 </project>

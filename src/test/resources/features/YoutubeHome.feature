@@ -12,7 +12,7 @@ Feature: Youtube Home
   @case2
   Scenario: Verify User can see Recently Uploaded filter on Youtube Homepage
     When User click arrow right button on filter bar 2 times
-    Then User see "Recently Uploaded" filter on Youtube Homepage
+    Then User see "Recently uploaded" filter on Youtube Homepage
 
   @case3
   Scenario: Verify User can open watch history from Youtube Homepage
