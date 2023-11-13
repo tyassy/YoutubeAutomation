@@ -1,16 +1,18 @@
 package base;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import webdriver.WebdriverInit;
 
 import java.util.concurrent.TimeUnit;
+
+import static webdriver.WebdriverInit.driver;
 
 public class BasePageObject {
 
     public WebDriver getDriver() {
-        return WebdriverInit.driver;
+        return driver;
     }
 
     public WebElement find(By locator){
@@ -42,8 +44,12 @@ public class BasePageObject {
     public void waitABit(java.lang.Integer seconds){}
 
     public void waitShortly(){
-        getDriver().manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
+    public void scrollToElement(By locator) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView();", locator);
+    }
 
 }
