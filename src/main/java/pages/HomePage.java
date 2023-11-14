@@ -8,7 +8,7 @@ import static locators.HomePageLocators.*;
 public class HomePage extends BasePageObject{
     public void openPage() {
         openUrl("https://youtube.com/");
-        waitShortly();
+        waitUntilFullyLoad();
     }
 
     public void clickYoutubeContentFilter(String filter) {
@@ -53,10 +53,10 @@ public class HomePage extends BasePageObject{
         }
     }
 
-    public void clickSidebarMenu(String sidebarMenu) {
+    public void clickSidebarMenu() {
         try {
-            waitUntilVisible(BUTTON_SIDEBAR_HOME);
-            find(By.xpath(String.format(BUTTON_SIDEBAR_MENU, sidebarMenu))).click();
+            waitUntilClickable(BUTTON_SIDEBAR_HISTORY);
+            find(BUTTON_SIDEBAR_HISTORY).click();
         }catch (Exception e){
         }
     }
@@ -93,6 +93,28 @@ public class HomePage extends BasePageObject{
         try {
             waitUntilVisible(BUTTON_SUBSCRIBE);
             return find(BUTTON_SUBSCRIBE).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public Boolean isDescDisplayed(String adDesc) {
+        try {
+            return find(By.xpath(String.format(LABEL_YOUTUBE_AD_DESC, adDesc))).isDisplayed();
+        } catch (Exception e){
+            return false;
+        }
+    }
+
+    public void clickGetItNowYoutubeMusicBtn() {
+        waitUntilClickable(BUTTON_GET_IT_NOW_AD);
+        find(BUTTON_GET_IT_NOW_AD).click();
+    }
+
+    public Boolean isYoutubeMusicPageOpened() {
+        try {
+            waitUntilVisible(YOUTUBE_MUSIC_PREMIUM_PAGE);
+            return find(YOUTUBE_MUSIC_PREMIUM_PAGE).isDisplayed();
         } catch (Exception e) {
             return false;
         }

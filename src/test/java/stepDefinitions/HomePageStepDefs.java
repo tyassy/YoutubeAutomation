@@ -31,9 +31,9 @@ public class HomePageStepDefs {
         Assertions.assertTrue(homePage.isFilterContentVisible(filter));
     }
 
-    @When("User click {string} button on Youtube Homepage sidebar")
-    public void userClickButtonOnYoutubeHomepageSidebar(String sidebarMenu) {
-        homePage.clickSidebarMenu(sidebarMenu);
+    @When("User click history button on Youtube Homepage sidebar")
+    public void userClickButtonOnYoutubeHomepageSidebar() {
+        homePage.clickSidebarMenu();
     }
 
     @Then("User see watch history page is opened")
@@ -80,5 +80,20 @@ public class HomePageStepDefs {
     @When("User click avatar from user number {int} from Youtube Homepage")
     public void userClickAvatarFromUserNumberFromYoutubeHomepage(int userNo) {
         homePage.clickUserAvatar(userNo);
+    }
+
+    @Then("User see {string} on Youtube Homepage")
+    public void userSeeOnYoutubeHomepage(String adDesc) {
+        Assertions.assertTrue(homePage.isDescDisplayed(adDesc));
+    }
+
+    @When("User click Get it now button on Youtube Music ad from Youtube Homepage")
+    public void userClickGetItNowButtonOnYoutubeMusicAdFromYoutubeHomepage() {
+        homePage.clickGetItNowYoutubeMusicBtn();
+    }
+
+    @Then("User see Youtube Music ad page is opened")
+    public void userSeeYoutubeMusicAdPageIsOpened() {
+        Assertions.assertTrue(homePage.isYoutubeMusicPageOpened());
     }
 }

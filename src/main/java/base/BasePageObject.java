@@ -64,6 +64,10 @@ public class BasePageObject {
         wait.until(ExpectedConditions.elementToBeClickable(By.id(String.valueOf(locator))));
     }
 
-
+    public void waitUntilFullyLoad() {
+        wait.withTimeout(Duration.ofSeconds(30))
+                .until(ExpectedConditions
+                        .visibilityOfElementLocated((By.xpath("(//a[@aria-label=\"Sign in\"])[2]"))));
+    }
 
 }
