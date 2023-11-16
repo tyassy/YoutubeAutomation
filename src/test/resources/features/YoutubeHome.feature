@@ -1,8 +1,8 @@
 @YoutubeHome
-Feature: Youtube Home
+Feature: YoutubeHome
 
   Background:
-    Given user access youtube homepage
+    Given User access youtube homepage
 
   @case1
   Scenario: Verify User can open Youtube Channel from Youtube Homepage

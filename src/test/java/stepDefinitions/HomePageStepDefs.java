@@ -11,7 +11,7 @@ public class HomePageStepDefs {
 
     HomePage homePage = new HomePage();
 
-    @Given("user access youtube homepage")
+    @Given("User access youtube homepage")
     public void userAccessYoutubeHomepage() {
         homePage.openPage();
     }
