@@ -7,29 +7,18 @@ public interface HomePageLocators {
     //Youtube Filter
     String FILTER_BUTTON = "//yt-chip-cloud-chip-renderer//yt-formatted-string[@title=\"%s\"]";
     By BUTTON_RIGHT_ARROW = By.cssSelector("button[aria-label=\"Next\"]");
-    By BUTTON_GET_IT_NOW_AD = By.xpath("//a[@aria-label=\"Get it now\"]");
+    By BUTTON_GET_IT_NOW_AD = By.xpath("//ytd-button-renderer[@id=\"action-button\"]");
 
-    //Sidebar Menu
-    By BUTTON_SIDEBAR_HISTORY = By.xpath("(//a[@title=\"History\"])[1]");
-    By BUTTON_SIDEBAR_HOME = By.xpath("(//a[@title=\"Home\"])[1]");
-    By HISTORY_PAGE = By.cssSelector("//yt-formatted-string[contains(text(),'Keep track of what you watch')]");
-    By BUTTON_HAMBURGER = By.xpath("//button[@aria-label=\"Guide\"]");
-
-    //Youtube Content
-    String BUTTON_ACTION_CONTENT = "(//button[@aria-label=\"Action menu\"])[%d]";
-    String ACTION_MENU_OPTION = "//tp-yt-paper-item//yt-formatted-string[contains(text(),'%s')]";
-    By LABEL_SHARE_POPUP = By.xpath("//yt-share-panel-title-v15-renderer//h2[contains(text(),'Share')]");
-    By CONTAINER_MINI_VIDEO_PLAYER = By.xpath("//div[@id=\"container\"]//div[@id=\"movie_player\"]");
-    By BUTTON_PLAY_ON_MINI_PLAYER = By.xpath("//div[@class=\"ytp-miniplayer-play-button-container\"]//button[@data-title-no-tooltip=\"Play\"]");
+    //Youtube Ad
     String LABEL_YOUTUBE_AD_DESC = "//yt-formatted-string[@id=\"text\"][text()=\"%s\"]";
-    By YOUTUBE_MUSIC_PREMIUM_PAGE = By.xpath("//img[@alt=\"YouTube Music Premium logo\"]");
-
-    //Microphone Search
-    By SEARCH_VOICE_POPUP = By.cssSelector("//div[contains(text(),'Waiting for permission')]");
-    By BUTTON_MICROPHONE = By.cssSelector("button[aria-label=\"Search with your voice\"]");
+    By YOUTUBE_MUSIC_PREMIUM_TRY_BUTTON = By.xpath("//button[@aria-label='Try it free']");
 
     //Youtube Channel
     By BUTTON_SUBSCRIBE = By.xpath("//span[contains(text(),'Subscribe')]");
     String BUTTON_CHANNEL_AVATAR = "(//a[@id=\"avatar-link\"])[%d]";
+
+    //Youtube Content
+    By ALL_CONTENTS_SECTION = By.xpath("(//div[@id=\"contents\"])[1]");
+    By TRENDING_TITLE_SECTION = By.xpath("//div[@id=\"content\"]//span[(text()=\"Trending\")]");
 
 }

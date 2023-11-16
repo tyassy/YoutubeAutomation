@@ -15,25 +15,8 @@ public class HomePage extends BasePageObject{
         find(By.xpath(String.format(FILTER_BUTTON, filter))).click();
     }
 
-    public void clicMicBtn() {
-        find(BUTTON_MICROPHONE).click();
-    }
-
-    public Boolean isMicPopupAppear() {
-        return find(SEARCH_VOICE_POPUP).isDisplayed();
-    }
-
-    public void clickNextFilterBtn(int times) {
-        int i;
-
-        for (i = 0; i < times; i++){
-            find(BUTTON_RIGHT_ARROW).click();
-        }
-    }
-
     public Boolean isFilterContentVisible(String filter) {
         try {
-            clickArrowRightBtn();
             return find(By.xpath(String.format(FILTER_BUTTON, filter))).isDisplayed();
         } catch (Exception e){
             return false;
@@ -51,38 +34,6 @@ public class HomePage extends BasePageObject{
         while (isArrowRightClickable()){
             find(BUTTON_RIGHT_ARROW).click();
         }
-    }
-
-    public void clickSidebarMenu() {
-        try {
-            waitUntilClickable(BUTTON_SIDEBAR_HISTORY);
-            find(BUTTON_SIDEBAR_HISTORY).click();
-        }catch (Exception e){
-        }
-    }
-
-    public Boolean isHistoryPageDisplayed() {
-        return find(HISTORY_PAGE).isDisplayed();
-    }
-
-    public void click3DotsActionMenu(int contentNo) {
-        find(By.xpath(String.format(BUTTON_ACTION_CONTENT,contentNo))).click();
-    }
-
-    public void clickActionMenu(String actionMenu) {
-        find(By.xpath(String.format(ACTION_MENU_OPTION, actionMenu))).click();
-    }
-
-    public Boolean isSharePopupDisplayed() {
-        return find(LABEL_SHARE_POPUP).isDisplayed();
-    }
-
-    public Boolean isMiniPlayerOpened() {
-        return find(CONTAINER_MINI_VIDEO_PLAYER).isDisplayed();
-    }
-
-    public Boolean isMiniPlayerPaused() {
-        return find(BUTTON_PLAY_ON_MINI_PLAYER).isDisplayed();
     }
 
     public void clickUserAvatar(int userNo ) {
@@ -106,15 +57,28 @@ public class HomePage extends BasePageObject{
         }
     }
 
-    public void clickGetItNowYoutubeMusicBtn() {
-        waitUntilClickable(BUTTON_GET_IT_NOW_AD);
+    public void clickGetItNowYoutubeAdBtn() {
+        waitUntilVisible(BUTTON_GET_IT_NOW_AD);
         find(BUTTON_GET_IT_NOW_AD).click();
     }
 
-    public Boolean isYoutubeMusicPageOpened() {
+    public Boolean isYoutubeAdPageOpened() {
         try {
-            waitUntilVisible(YOUTUBE_MUSIC_PREMIUM_PAGE);
-            return find(YOUTUBE_MUSIC_PREMIUM_PAGE).isDisplayed();
+            waitUntilVisible(YOUTUBE_MUSIC_PREMIUM_TRY_BUTTON);
+            return find(YOUTUBE_MUSIC_PREMIUM_TRY_BUTTON).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void scrollDownYoutubeHomepage() {
+        scrollToElement(TRENDING_TITLE_SECTION);
+    }
+
+    public Boolean isTrendingSectionDisplayed() {
+        try {
+            waitUntilVisible(TRENDING_TITLE_SECTION);
+            return find(TRENDING_TITLE_SECTION).isDisplayed();
         } catch (Exception e) {
             return false;
         }

@@ -53,7 +53,8 @@ public class BasePageObject {
 
     public void scrollToElement(By locator) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView();", locator);
+        WebElement element = driver.findElement(locator);
+        js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
     public void waitUntilVisible(By locator) {

@@ -11,9 +11,9 @@ public class WebDriverHooks {
         WebdriverInit.initialize();
     }
 
-//    @After(order = 1)
-//    public void quitWebdriver(){
-//        WebdriverInit.quit();
-//    }
+    @After(order = 1)
+    public void quitWebdriver(){
+        WebdriverInit.quit();
+    }
 
 }
