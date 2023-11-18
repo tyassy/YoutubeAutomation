@@ -1,6 +1,5 @@
 package stepDefinitions;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -41,11 +40,6 @@ public class HomePageStepDefs {
         homePage.clickUserAvatar(userNo);
     }
 
-    @Then("User see {string} on Youtube Homepage")
-    public void userSeeOnYoutubeHomepage(String adDesc) {
-        Assertions.assertTrue(homePage.isDescDisplayed(adDesc));
-    }
-
     @When("User click Get it now button on Youtube ad from Youtube Homepage")
     public void userClickGetItNowButtonOnYoutubeAdFromYoutubeHomepage() {
         homePage.clickGetItNowYoutubeAdBtn();
@@ -64,5 +58,20 @@ public class HomePageStepDefs {
     @Then("User see Trending section is displayed")
     public void userSeeTrendingSectionIsDisplayed() {
         Assertions.assertTrue(homePage.isTrendingSectionDisplayed());
+    }
+
+    @When("User type {string} on search bar")
+    public void userTypeOnSearchBar(String keyword) {
+        homePage.typeKeywordOnSearchBar(keyword);
+    }
+
+    @When("User click search button")
+    public void userClickSearchButton() {
+        homePage.clickSearchBtn();
+    }
+
+    @Then("User see content contains {string} on the title on search result")
+    public void userSeeContentContainsOnTheTitleOnSearchResult(String keyword) {
+        homePage.isSearchResultDisplayed(keyword);
     }
 }

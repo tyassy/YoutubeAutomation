@@ -5,7 +5,7 @@ Feature: YoutubeHome
     Given User access youtube homepage
 
   @case1
-  Scenario: Verify User can open Youtube Channel from Youtube Homepage
+  Scenario: Verify User can open Youtube Channel from Youtube Content on Youtube Homepage
     When User click avatar from user number 1 from Youtube Homepage
     Then User see user youtube channel is opened
 
@@ -15,8 +15,10 @@ Feature: YoutubeHome
     Then User see "Recently uploaded" filter on Youtube Homepage
 
   @case3
-  Scenario: Verify User can see Youtube ad description on Youtube Homepage
-    Then User see "Get family plan. Music ad-free and in the background for up to 6 household members." on Youtube Homepage
+  Scenario: Verify User can search content from search bar on Youtube Homepage
+    When User type "The Beatles" on search bar
+    And User click search button
+    Then User see content contains "The Beatles" on the title on search result
 
   @case4
   Scenario: Verify User can open Youtube ad page from Youtube Homepage

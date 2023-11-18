@@ -49,14 +49,6 @@ public class HomePage extends BasePageObject{
         }
     }
 
-    public Boolean isDescDisplayed(String adDesc) {
-        try {
-            return find(By.xpath(String.format(LABEL_YOUTUBE_AD_DESC, adDesc))).isDisplayed();
-        } catch (Exception e){
-            return false;
-        }
-    }
-
     public void clickGetItNowYoutubeAdBtn() {
         waitUntilVisible(BUTTON_GET_IT_NOW_AD);
         find(BUTTON_GET_IT_NOW_AD).click();
@@ -79,6 +71,27 @@ public class HomePage extends BasePageObject{
         try {
             waitUntilVisible(TRENDING_TITLE_SECTION);
             return find(TRENDING_TITLE_SECTION).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public void typeKeywordOnSearchBar(String keyword) {
+        waitUntilVisible(INPUT_SEARCH_KEYWORD);
+        find(INPUT_SEARCH_KEYWORD).click();
+        find(INPUT_SEARCH_KEYWORD).clear();
+        type(INPUT_SEARCH_KEYWORD, keyword);
+    }
+
+    public void clickSearchBtn() {
+        find(SEARCH_BUTTON).click();
+    }
+
+    public Boolean isSearchResultDisplayed(String keyword) {
+
+        try{
+            waitUntilAllVisible(LABEL_VIDEO_TITLE);
+            return find(By.xpath(String.format(CONTENTS_TITLE, keyword))).isDisplayed();
         } catch (Exception e) {
             return false;
         }

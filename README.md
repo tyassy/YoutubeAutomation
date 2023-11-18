@@ -1,6 +1,6 @@
 # Hello,
 
-Welcome to Tyas's Assignment Test. In this page I am going to share how to run the test cases in this repository.
+Welcome to Tyas's Youtube Homepage web automation. In this page I am going to share how to run the test cases in this repository.
 
 ## To Be Prepared
 
@@ -15,10 +15,13 @@ Welcome to Tyas's Assignment Test. In this page I am going to share how to run t
 
 After Cucumber + and Cucumber for Java are installed, test cases can be tested from feature file by following the steps below:
 
-- Clone the repository
+- Clone the repository, one way to clone can try steps below:
+  - Get from VCS
+  - Paste URL
+  - Click Clone
 - Open YoutubeHome.feature
 - Simply click play button on the left scenario name to run per case
-- Or, simply click play button on the left of Feature: Youtube Home to run all cases
+- Or, simply click play button on the left of Feature: YoutubeHome to run all cases
 
 If both Cucumber + and Cucumber for Java are unable to be installed for some reasons, test cases can be run also from CucumberRunner by following steps below:
 

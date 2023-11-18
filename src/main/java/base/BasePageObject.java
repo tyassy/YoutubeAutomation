@@ -71,4 +71,9 @@ public class BasePageObject {
                         .visibilityOfElementLocated((By.xpath("(//a[@aria-label=\"Sign in\"])[2]"))));
     }
 
+    public void waitUntilAllVisible(By locator) {
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.id(String.valueOf(locator))));
+    }
+
+
 }

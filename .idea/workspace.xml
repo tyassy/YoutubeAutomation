@@ -6,6 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="bda5955f-2344-426a-9c04-0ff8337187a1" name="Changes" comment="Update methods">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/BasePageObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/BasePageObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/locators/HomePageLocators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/locators/HomePageLocators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepDefinitions/HomePageStepDefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepDefinitions/HomePageStepDefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/YoutubeHome.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/YoutubeHome.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +53,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="Gradle.CucumberRunner">
+  <component name="RunManager" selected="Cucumber Java.Feature: YoutubeHome">
     <configuration name="Feature: YoutubeHome" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/YoutubeHome.feature" />
@@ -67,15 +73,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verify User can see Recently Uploaded filter on Youtube Homepage" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verify User can search content from search bar on Youtube Homepage" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/YoutubeHome.feature" />
       <option name="GLUE" value="stepDefinitions hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="YoutubeAutomation.test" />
-      <option name="NAME_FILTER" value="^Verify User can see Recently Uploaded filter on Youtube Homepage$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify User can see Recently Uploaded filter on Youtube Homepage$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify User can see Recently Uploaded filter on Youtube Homepage" />
+      <option name="NAME_FILTER" value="^Verify User can search content from search bar on Youtube Homepage$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify User can search content from search bar on Youtube Homepage$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify User can search content from search bar on Youtube Homepage" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -107,15 +113,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Scenario: Verify User see Trending section contents on Youtube Homepage" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+    <configuration name="Scenario: Verify User can see Youtube ad description on Youtube Homepage" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/YoutubeHome.feature" />
       <option name="GLUE" value="stepDefinitions hooks" />
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="YoutubeAutomation.test" />
-      <option name="NAME_FILTER" value="^Verify User see Trending section contents on Youtube Homepage$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify User see Trending section contents on Youtube Homepage$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Verify User see Trending section contents on Youtube Homepage" />
+      <option name="NAME_FILTER" value="^Verify User can see Youtube ad description on Youtube Homepage$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Verify User can see Youtube ad description on Youtube Homepage$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Verify User can see Youtube ad description on Youtube Homepage" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -152,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CucumberRunner" />
         <item itemvalue="Cucumber Java.Feature: YoutubeHome" />
+        <item itemvalue="Cucumber Java.Scenario: Verify User can search content from search bar on Youtube Homepage" />
+        <item itemvalue="Cucumber Java.Scenario: Verify User can see Youtube ad description on Youtube Homepage" />
+        <item itemvalue="Gradle.CucumberRunner" />
         <item itemvalue="Cucumber Java.Scenario: Verify User can see Youtube Music ad description on Youtube Homepage" />
-        <item itemvalue="Cucumber Java.Scenario: Verify User can see Recently Uploaded filter on Youtube Homepage" />
-        <item itemvalue="Cucumber Java.Scenario: Verify User see Trending section contents on Youtube Homepage" />
       </list>
     </recent_temporary>
   </component>
@@ -204,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1700146417403</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Update methods">
+      <created>1700146940940</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700146940940</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
